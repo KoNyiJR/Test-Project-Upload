@@ -1,0 +1,265 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto
+}
+
+body {
+  background-image: linear-gradient(45deg, rgba(194, 233, 221, .5) 1%, rgba(104, 119, 132, .5)), linear-gradient(-45deg, #494d71, hsla(77, 47%, 81%, .5) 80%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Open Sans;
+  margin: 0;
+  padding: 0
+}
+
+button {
+  background: 0;
+  border: 0;
+  width: 32px;
+  height: 32px
+}
+
+footer {
+  height: 50px;
+  line-height: 50px;
+  background-color: rgba(51, 51, 51, .8);
+  color: #ddd;
+  padding: 0 20%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 1.125rem;
+  letter-spacing: .075rem
+}
+
+footer label {
+  color: #ea5455;
+  float: right;
+  text-transform: uppercase;
+  padding: 0 10px;
+  transition: all .3s ease;
+  cursor: pointer
+}
+
+footer label:hover {
+  background-color: #eee;
+  text-decoration: underline;
+  border-radius: 25px
+}
+
+footer label i {
+  margin-right: 10px
+}
+#videoBox {
+  max-width: 800px;
+  min-width: 250px;
+  max-height: 450px;
+  min-height: 140.6px;
+  position: relative;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 30px 0 #030303;
+  background-color: transparent;
+  margin: 5% auto
+}
+
+#videoBox:hover .control-bar {
+  opacity: .92
+}
+
+#videoBox:-webkit-full-screen {
+  max-width: 1920px;
+  max-height: 1080px
+}
+
+#videoBox:-moz-full-screen {
+  max-width: 1920px;
+  max-height: 1080px
+}
+
+#videoBox:-ms-fullscreen {
+  max-width: 1920px;
+  max-height: 1080px
+}
+
+#videoBox:fullscreen {
+  max-width: 1920px;
+  max-height: 1080px
+}
+
+#customVideo {
+  cursor: pointer;
+  width: 100%;
+  height: 100%
+}
+
+.fa {
+  color: #aaa;
+  cursor: pointer;
+  transition: all .2s ease
+}
+
+.fa:hover {
+  color: #fff;
+  border-color: #fff
+}
+
+.control-bar {
+  box-sizing: border-box;
+  padding: 10px 25px;
+  background-color: #222831;
+  opacity: 0;
+  transition: all .5s ease;
+  color: #eee;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 8px
+}
+
+input[type=range],
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: transparent;
+  outline: 0;
+  border: 0;
+  width: 100%
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  cursor: pointer;
+  height: 3px;
+  margin-bottom: 5px;
+  box-shadow: 0 0 2px #eee, 0 0 2px #eee;
+  transition: all .2s ease
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #ea5455;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #ea5455;
+  cursor: pointer;
+  margin-top: -7.5px;
+  box-shadow: 1px 1px 1px #333, 0 0 1px #333;
+  transition: all .2s ease
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  background-color: #ff7d54;
+  border: 1px solid #ff7d54
+}
+
+input[type=range]::-moz-range-thumb {
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #ea5455;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #ea5455;
+  cursor: pointer;
+  margin-top: -7.5px;
+  box-shadow: 1px 1px 1px #333, 0 0 1px #333;
+  transition: all .2s ease
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  background-color: #ff7d54;
+  border: 1px solid #ff7d54
+}
+
+input[type=range]::-ms-thumb {
+  appearance: none;
+  border: 1px solid #ea5455;
+  border-radius: 50%;
+  height: 18px;
+  width: 18px;
+  background: #ea5455;
+  cursor: pointer;
+  margin-top: -7.5px;
+  box-shadow: 1px 1px 1px #333, 0 0 1px #333;
+  transition: all .2s ease
+}
+
+input[type=range]::-ms-thumb:hover {
+  background-color: #ff7d54;
+  border: 1px solid #ff7d54
+}
+
+.video-seekbar {
+  position: relative;
+  display: inline-block;
+  width: 50%;
+  margin: 0 10px 6px
+}
+
+.video-seekbar input,
+.video-seekbar progress {
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0
+}
+
+.video-seekbar .bufferBar::-webkit-progress-bar,
+.video-seekbar .progressBar::-webkit-progress-bar {
+  background-color: #2d4059;
+  margin-left: 2px
+}
+
+.video-seekbar .bufferBar::-moz-progress-bar,
+.video-seekbar .progressBar::-moz-progress-bar {
+  margin: 0
+}
+
+.video-seekbar .progressBar::-webkit-progress-value {
+  background-color: #ea5455
+}
+
+.video-seekbar .bufferBar::-webkit-progress-value {
+  background-color: #e5f985
+}
+
+.video-seekbar #seekBar {
+  z-index: 3
+}
+
+.video-seekbar #progressBar {
+  z-index: 2;
+  opacity: .7
+}
+
+.video-seekbar #bufferBar {
+  z-index: 1
+}
+
+#volumeBtn {
+  margin-left: 20px
+}
+
+input.volumeSeekBar {
+  width: 15%;
+  margin-right: 2%
+}
+
+#fsBtn {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  float: right
+}
+
+footer label i:hover {
+  color: #09F !important;
+}
+
